@@ -35,7 +35,7 @@ app.post('/notes', (req, res) => {
     noteItems
   }
   app.locals.notes.push(newNote);
-  res.status(200).json(app.locals.notes);
+  res.status(200).json(newNote);
 });
 
 export default app;
