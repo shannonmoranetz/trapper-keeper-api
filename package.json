@@ -34,5 +34,6 @@
     "collectCoverageFrom": [
       "app.js",
       "!server.js"
-    ]}
+    ]
+  }
 }

@@ -72,8 +72,7 @@ describe('API', () => {
         .send(newNote);
       //expectation
       expect(response.status).toBe(200);
-      expect(response.body.length).toBe(4)
-      expect(response.body).toEqual(app.locals.notes)
+      expect(response.body).toEqual(newNote);
     });
 
     it('should respond with a 422 code and error if there is no id', async () => {
