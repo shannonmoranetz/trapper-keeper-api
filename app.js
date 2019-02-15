@@ -21,7 +21,7 @@ app.delete('/notes/:id', (req, res) => {
   const noteIndex = app.locals.notes.findIndex(note => note.id == req.params.id);
   if (noteIndex === -1) return res.status(404).json('Note not found');
   app.locals.notes.splice(noteIndex, 1);
-  return res.status(204).send('Note deleted');
+  return res.sendStatus(204)
 })
 
 app.post('/notes', (req, res) => {
@@ -37,5 +37,14 @@ app.post('/notes', (req, res) => {
   app.locals.notes.push(newNote);
   res.status(200).json(newNote);
 });
+
+app.put('/notes/:id', (req, res) => {
+  const {id} = req.params
+  const note = req.body
+  const noteIndex = app.locals.notes.findIndex(note => note.id == id)
+  if(noteIndex === -1) return res.status(404).json('Note not found')
+  app.locals.notes.splice(noteIndex, 1, note)
+  return res.status(200).json(app.locals.notes[noteIndex])
+})
 
 export default app;

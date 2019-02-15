@@ -19,6 +19,21 @@ describe('API', () => {
     app.locals.notes = notes
   })
 
+  afterEach(() => {
+    notes = [
+      {title: 'Dylan', 
+      noteItems: [{text: 'Is great'}, {text: 'Also Cool'}], 
+      id: 1},
+      {title: 'Shannon', 
+      noteItems: [{text: 'Is amazing'}, {text: 'Also Beautiful'}], 
+      id: 2},
+      {title: 'Justin', 
+      noteItems: [{text: 'Is awesome'}, {text: 'Also stylish'}], 
+      id: 3}
+    ]
+    app.locals.notes = notes
+  })
+
   describe('get /notes', () => {
     it('should return status 200 and all of the notes', async () => {
       //setup / execution
@@ -101,4 +116,40 @@ describe('API', () => {
       expect(response.body).toEqual('Please try adding your note again')
     })
   });
+
+  describe('put /notes/:id', () => {
+    it('if id params matches a note id, replace note, send 200 status and return updated note', async () => {
+      //setup
+      const updatedNote = {title: 'Shannon Moranetz', 
+      noteItems: [{text: 'Is Super amazing'}, {text: 'Also Beautiful and kind'}], 
+      id: 2}
+      const newNotes = [{title: 'Dylan', 
+      noteItems: [{text: 'Is great'}, {text: 'Also Cool'}], 
+      id: 1},
+      {title: 'Shannon Moranetz', 
+      noteItems: [{text: 'Is Super amazing'}, {text: 'Also Beautiful and kind'}], 
+      id: 2},
+      {title: 'Justin', 
+      noteItems: [{text: 'Is awesome'}, {text: 'Also stylish'}], 
+      id: 3}
+    ]
+      //execution
+      const response = await request(app).put('/notes/2').send(updatedNote);
+      //expectation
+      expect(app.locals.notes).toEqual(newNotes)
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual(updatedNote)
+    })
+
+    it('should return status 404 and error if the note is not found', async () => {
+      const updatedNote = {title: 'Shannon Moranetz', 
+      noteItems: [{text: 'Is Super amazing'}, {text: 'Also Beautiful and kind'}], 
+      id: 2}
+      //execution
+      const response = await request(app).put('/notes/5').send(updatedNote)
+      //expectation
+      expect(response.status).toBe(404)
+      expect(response.body).toEqual('Note not found')
+    })
+  })
 });
