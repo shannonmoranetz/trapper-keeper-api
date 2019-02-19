@@ -1,10 +1,11 @@
 # Trapper-Keeper (Back-end)
 
 ## Description
-This is the back-end repository for the Trapper Keeper application found at https://github.com/shannonmoranetz/trapper-keeper-ui. 
+This is the back-end repository for the Trapper Keeper application found at: 
+#### https://github.com/shannonmoranetz/trapper-keeper-ui 
 
 ## Getting Started
-#### Additional setup instructions can be found at: https://github.com/shannonmoranetz/trapper-keeper-ui. 
+#### Additional setup instructions can be found at the repository link above. 
 #### Please follow all associated instructions within that repository to set up both the front-end application and back-end server.
 
 Clone the repository within your project:
@@ -29,6 +30,6 @@ Trapper Keeper's back-end was built using node.js and Express. Tests were writte
 http://frontend.turing.io/projects/trapper-keeper.html
 
 ## Contributors
-Dylan Hofmann [@dylhof](https://github.com/dylhof)
-Justin Duncan [@JustinD85](https://github.com/JustinD85)
+Dylan Hofmann [@dylhof](https://github.com/dylhof)<br/>
+Justin Duncan [@JustinD85](https://github.com/JustinD85)<br/>
 Shannon Moranetz [@shannonmoranetz](https://github.com/shannonmoranetz)
