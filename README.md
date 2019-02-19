@@ -23,7 +23,7 @@ $ npm start
 The JSON data for stored notes is viewable at localhost:3000/notes.
 Thank you for using Trapper Keeper!
 
-## Project Development Notes:
+## Back-End Tech Stack:
 Trapper Keeper's back-end was built using node.js and Express. Tests were written using Jest, Enzyme and supertest. 
 
 ## Original Assignment
