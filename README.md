@@ -1,35 +1,45 @@
-# Trapper-Keeper (Back-end)
+# Trapper Keeper API
 
-## Description
-This is the back-end repository for the Trapper Keeper application found at: 
-#### https://github.com/shannonmoranetz/trapper-keeper-ui 
+## Save itemized to-do notes (back-end)
 
-## Getting Started
-#### Additional setup instructions can be found at the repository link above. 
-#### Please follow all associated instructions within that repository to set up both the front-end application and back-end server.
+* * *
 
-Clone the repository within your project:
-```
-https://github.com/dylhof/trapper-keeper-api
-```
-Install the required npm modules in your local back-end project directory:
-```
-$ npm install
-```
-Start the back-end server:
-```
-$ npm start
-```
-The JSON data for stored notes is viewable at localhost:3000/notes.
-Thank you for using Trapper Keeper!
+### To-do notes application inspired by Google Keep. Includes complete front and back-end. 
 
-## Back-End Tech Stack:
-Trapper Keeper's back-end was built using node.js and Express. Tests were written using Jest, Enzyme and supertest. 
+![Screenshot](https://user-images.githubusercontent.com/18714169/53057391-8c82b780-346c-11e9-8b5a-baf292f00524.gif)
 
-## Original Assignment
-http://frontend.turing.io/projects/trapper-keeper.html
+### Features
 
-## Contributors
-Dylan Hofmann [@dylhof](https://github.com/dylhof)<br/>
-Justin Duncan [@JustinD85](https://github.com/JustinD85)<br/>
-Shannon Moranetz [@shannonmoranetz](https://github.com/shannonmoranetz)
+*   RESTful API
+*   CRUD endpoints
+*   HTTP Methods: GET, DELETE, POST & PUT
+
+### Tech Stack
+
+*   Node & Express
+*   Jest & Enzyme
+
+### Installation
+
+* Front-end:
+```
+https://github.com/shannonmoranetz/trapper-keeper-ui
+```
+* Dependencies:
+```
+npm i
+```
+* Start:
+```
+npm start
+```
+* Test:
+```
+npm test
+```
+
+### Contributors
+
+* [Shannon Moranetz](https://github.com/shannonmoranetz)
+* [Dylan Hofmann](https://github.com/dylhof)
+* [Justin Duncan](https://github.com/JustinD85)
