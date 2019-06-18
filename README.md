@@ -17,7 +17,7 @@
 ### Tech Stack
 
 *   Node & Express
-*   Jest & Enzyme
+*   Supertest
 
 ### Installation
 
